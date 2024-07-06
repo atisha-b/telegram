@@ -19,6 +19,7 @@ TELEGRAM_API_URL = f'https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}'
 subscribers_file = 'subscribers.json'
 
 def load_subscribers():
+    
     if os.path.exists(subscribers_file):
         with open(subscribers_file, 'r') as file:
             return json.load(file)
