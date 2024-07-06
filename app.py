@@ -12,14 +12,14 @@ load_dotenv()
 app = Flask(__name__)
 
 # Get the Telegram bot token from environment variables
-TELEGRAM_BOT_TOKEN = os.getenv('TELEGRAM_BOT_TOKEN')
+TELEGRAM_BOT_TOKEN = os.getenv('TELEGRAM_BOT_TOKEN') 
 TELEGRAM_API_URL = f'https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}'
 
 # File to store chat IDs
 subscribers_file = 'subscribers.json'
 
 def load_subscribers():
-    
+
     if os.path.exists(subscribers_file):
         with open(subscribers_file, 'r') as file:
             return json.load(file)
